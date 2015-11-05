@@ -57,16 +57,21 @@ body {
     text-align: center;
     color: white;
     height: 422px;
-    background: no-repeat top center url('../img/negativespace-15.jpg') rgba(0, 0, 0, 0.55);
+    background: no-repeat top center url('../img/youtube_pattern.png') rgba(0, 0, 0, 0.55);
     background-size: 100%;
 }
+
+.hero2{
+    background: no-repeat top center url('../img/e4634c5abc4bae8d306ff6e28e0be9eb.jpg') rgba(0, 0, 0, 0.55);
+}
+
 .hero h2 {
     color: white;
 }
 
+
 .dry {
     border-top: 5px solid #aaa;
-    background-color: #fff;
     padding: 80px 0;
 }
 
@@ -86,20 +91,6 @@ body {
 .wrapper-mid {
     width: 768px;
     margin: 0 auto;
-}
-
-.arrow {
-    font-size: 20px;
-    text-decoration: none;
-    color: #0F559A;
-}
-.arrow_alt {
-    text-decoration: none;
-    color: #ff3300;
-}
-
-.arrow_alt a:hover{
-    
 }
 
 .marketing_titles{
@@ -133,8 +124,8 @@ body {
 
 }
 
-.marketing_titles  li :hover{
-    color: #FF3300;
+.marketing_titles li :hover{
+    color: #fff;
 }
 
 .footer {
@@ -184,7 +175,7 @@ body {
 }
 
 .social a:hover{
-    color: #87ca1d;
+    color: red;
 }
 
 
