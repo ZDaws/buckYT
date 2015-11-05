@@ -41,6 +41,9 @@ body {
 
 .navbar {
     margin: 0;
+    float: left;
+    width: 20%;
+    padding-top: 7px;
 }
 .navitem {
     display: inline-block;
@@ -82,6 +85,20 @@ body {
 
 .hero h2 {
     color: white;
+}
+
+.logo {
+    margin:0 auto;
+    width: 200px;
+    text-align: center;
+    color: #e04006;
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.logo img {
+    vertical-align: bottom;
+    height: 34px;
 }
 
 .btn {
