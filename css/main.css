@@ -14,7 +14,6 @@ h3 {
     color: #fff;
     margin: 0;
     text-align: center;
-    height: 50px;
     padding-top: 50px;
 }
 
@@ -35,13 +34,13 @@ body {
 }
 
 .header {
-    background-color: #aaa;
-    height: 60px;
+    background-color: #eee;
     border-bottom: 1px solid #000;
+    padding: 10px 0;
 }
 
 .navbar {
-
+    margin: 0;
 }
 .navitem {
     display: inline-block;
@@ -50,25 +49,62 @@ body {
     color: #fff;
 }
 
+.player-container {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.player-title h3{
+    padding: 0;
+}
 .section {
+    padding-top: 10px;
 }
 
 .hero {
     text-align: center;
     color: white;
-    height: 422px;
+}
+
+.wallpaper {
     background: no-repeat top center url('../img/youtube_pattern.png') rgba(0, 0, 0, 0.55);
     background-size: 100%;
 }
 
 .hero2{
-    background: no-repeat top center url('../img/e4634c5abc4bae8d306ff6e28e0be9eb.jpg') rgba(0, 0, 0, 0.55);
+    background: no-repeat top center url('../img/negativespace-15.jpg') rgba(0, 0, 0, 0.55);
+    background-size: 100%;
+}
+
+.hero2 h2{
+    color: white;
 }
 
 .hero h2 {
     color: white;
 }
 
+.btn {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #B11C1A;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px 24px;
+    margin-right: 50px;
+}
+
+.btn-last {
+    margin-right: 0;
+}
+
+.cta-btn {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
 
 .dry {
     border-top: 5px solid #aaa;
@@ -97,7 +133,7 @@ body {
     font-family: "Work Sans",sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #959A9E;
+    color: white;
 }
 
 .marketing_titles ul{
@@ -114,7 +150,7 @@ body {
 
 .marketing_titles a{
     display: inline-block;
-    color: #959A9E;
+    color: white;
     text-decoration: none;
 
 }
@@ -125,13 +161,12 @@ body {
 }
 
 .marketing_titles li :hover{
-    color: #fff;
+    color: red;
 }
 
 .footer {
     width: auto;
     padding: 50px 15px;
-    background-color: #aaa
 }
 
 .footer_nav ul {
@@ -150,7 +185,7 @@ body {
     font-family: "Work Sans",sans-serif;
     font-weight: 200;
     font-size: 20px;
-    color: #fff;
+    color: white;
     margin: 0;
     padding: 0 15px;
     text-decoration: none;
@@ -160,23 +195,20 @@ body {
     color: #87ca1d;
 }
 
-.footer p {
+.footer p{
     padding: 15px 0;
     margin-bottom: 10px;
     text-align: center;
-    color: #fff;
+    color: white;
 }
 
 .social a{
     font-size: 25px;
-    color: #fff;
+    color: white;
     text-decoration: none;
     padding: 0 22px;
 }
 
-.social a:hover{
-    color: red;
-}
 
 
 
