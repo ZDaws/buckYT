@@ -61,7 +61,7 @@ body {
     padding: 0;
 }
 .section {
-    padding-top: 10px;
+    padding-top: 60px;
 }
 
 .hero {
@@ -72,6 +72,7 @@ body {
 .wallpaper {
     background: no-repeat top center url('../img/youtube_pattern.png') rgba(0, 0, 0, 0.55);
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 .hero2{
