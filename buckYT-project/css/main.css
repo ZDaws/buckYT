@@ -1,0 +1,194 @@
+
+h2 {
+    font-family: "Work Sans",sans-serif;
+    font-weight: 200;
+    font-size: 66px;
+    color: #aaa;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Work Sans",sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    padding-top: 50px;
+}
+
+p {
+    font-family: "Work Sans",sans-serif;
+    line-height: 1.42857143
+}
+
+a {
+    font-family: "Work Sans",sans-serif;
+}
+
+body {
+    background-color: #aaa
+}
+
+.container {
+}
+
+.header {
+    background-color: #aaa;
+    height: 60px;
+    border-bottom: 1px solid #000;
+}
+
+.navbar {
+
+}
+.navitem {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+.section {
+}
+
+.hero {
+    text-align: center;
+    color: white;
+    height: 422px;
+    background: no-repeat top center url('../img/negativespace-15.jpg') rgba(0, 0, 0, 0.55);
+    background-size: 100%;
+}
+.hero h2 {
+    color: white;
+}
+
+.dry {
+    border-top: 5px solid #aaa;
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.dry_alt {
+    border-top: 5px solid #ff3300;
+    padding-bottom: 150px;
+}
+
+.dry p {
+    font-size: 20px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.wrapper-mid {
+    width: 768px;
+    margin: 0 auto;
+}
+
+.arrow {
+    font-size: 20px;
+    text-decoration: none;
+    color: #0F559A;
+}
+.arrow_alt {
+    text-decoration: none;
+    color: #ff3300;
+}
+
+.arrow_alt a:hover{
+    
+}
+
+.marketing_titles{
+    font-family: "Work Sans",sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #959A9E;
+}
+
+.marketing_titles ul{
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.marketing_titles li{
+    display: inline-block;
+    padding: 15px 55px;
+}
+
+.marketing_titles a{
+    display: inline-block;
+    color: #959A9E;
+    text-decoration: none;
+
+}
+
+.marketing_titles a span{
+    font-size: 70px;
+
+}
+
+.marketing_titles  li :hover{
+    color: #FF3300;
+}
+
+.footer {
+    width: auto;
+    padding: 50px 15px;
+    background-color: #aaa
+}
+
+.footer_nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_nav li {
+    display: inline-block;
+    padding: 15px 0;
+}
+
+.footer_nav a {
+    font-family: "Work Sans",sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.footer_nav a:hover {
+    color: #87ca1d;
+}
+
+.footer p {
+    padding: 15px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.social a{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 22px;
+}
+
+.social a:hover{
+    color: #87ca1d;
+}
+
+
+
+
+
+
