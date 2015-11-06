@@ -26,10 +26,6 @@ a {
     font-family: "Work Sans",sans-serif;
 }
 
-body {
-    background-color: #aaa
-}
-
 .container {
 }
 
@@ -58,7 +54,7 @@ body {
 }
 
 .player-title h3{
-    padding: 0;
+    padding-bottom: 40px;
 }
 .section {
     padding-top: 60px;
@@ -70,7 +66,7 @@ body {
 }
 
 .wallpaper {
-    background: no-repeat top center url('../img/youtube_pattern.png') rgba(0, 0, 0, 0.55);
+    background: top center url('../img/youtube_pattern.png') rgba(0, 0, 0, 0.55);
     background-size: 100%;
     background-attachment: fixed;
 }
@@ -225,6 +221,54 @@ body {
     color: white;
     text-decoration: none;
     padding: 0 22px;
+}
+
+.entry {
+    padding-top: 40px;
+}
+
+.entry p{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.entry li{
+    color: white;
+    font-size: 1.1rem;
+    list-style: none;
+}
+
+.entry a{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.entry input[type="text"] {
+  display: inline-block;
+  margin: 0;
+  font-family: "Work Sans",sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
+  box-shadow: 10;
+  border-radius: none;
+}
+
+.entry input[type="text"]:focus {
+  outline-color: #68BCFF;
+}
+
+.add{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #B11C1A;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
 }
 
 
