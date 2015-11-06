@@ -232,6 +232,10 @@ a {
     padding: 0 22px;
 }
 
+.social a:hover{
+    color: #68BCFF;
+}
+
 .entry {
     padding-top: 40px;
 }
