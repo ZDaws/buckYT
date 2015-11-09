@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/icomoon/style.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     </head>
     <body class="wallpaper">
         <nav class="header">
@@ -29,43 +30,79 @@
             <ul>
                 <li><p>Title:</p><input type="text" placeholder="Title of Your BuckYT"></li>
                 <li><p>Author:</p><input type="text" placeholder="Your Name"></li>
-                <li><p>Video:</p><input type="text" placeholder="Youtube URL"><a class="add" href="#">+</a></li>
+                <li><p>Video:</p><input class="js-videourl" type="text"
+                    placeholder="Youtube URL"><button class="btn add js-add">+</button></li>
             </ul>
         </div>
         <div class="save-btn">
             <ul>
-                <li><a class="btn" href="share.html">Save</a></li>
+                <li><a class="btn js-save" href="share.html">Save</a></li>
             </ul>
         </div>
         <div class="preview">
             <h3>Preview</h3>
             <div class = "player-container">
-                <ul>
-                    <li><div id ="player"></div></li>
-                    <li><div id ="player2"></div></li>
-                    <li><div id ="player3"></div></li>
-                </ul>
+                <div class="players">
+                </div>
             </div>  
             <script>
-                // 2. This code loads the IFrame Player API code asynchronously.
+                // This code loads the IFrame Player API code asynchronously.
                 var tag = document.createElement('script');
-
                 tag.src = "https://www.youtube.com/iframe_api";
                 var firstScriptTag = document.getElementsByTagName('script')[0];
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-                // 3. This function creates an <iframe> (and YouTube player)
-                //    after the API code downloads.
-                var player;
+                $(function() {
+                    $('.js-add').on('click', function() {
+                        var textinput=$('.js-videourl').val();
+                        var videoid = youtube_parser(textinput);
+
+                        // If no video id found from the input, assume the
+                        // entire input is the video id from YT
+                        if (videoid == false) {
+                            videoid = textinput;
+                        }
+
+                        var player_element = $('<div class="player"></div>');
+                        $('.players').append(player_element);
+                        makePlayer(player_element.get(0), videoid);
+
+                        $('.js-videourl').val('');
+                    });
+                });
+
+                // From http://stackoverflow.com/questions/3452546/javascript-regex-how-to-get-youtube-video-id-from-url
+                function youtube_parser(url){
+                    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+                    var match = url.match(regExp);
+                    return (match&&match[7].length==11)? match[7] : false;
+                }
+
                 function onYouTubeIframeAPIReady() {
+                    //$('.players').children().each(function(index,element) {
+                    //makePlayer(playerDiv, $(playerDiv).data('videoid'));
+                    //});
+
+                    /*
                     player = new YT.Player('player', {
-                      height: '255',
-                      width: '380',
-                      videoId: 'M7lc1UVf-VE',
                       events: {
                         'onReady': onPlayerReady,
                         'onStateChange': onPlayerStateChange
                       }
+                    });
+                    */
+                }
+
+                function makePlayer(element, videoid) {
+                    player = new YT.Player(element, {
+                        height: '255',
+                        width: '380',
+                        videoId: videoid,
+                        events: {
+                            'onReady': function(event) {
+                                console.log(event.target.getVideoUrl());
+                            }
+                        }
                     });
                 }
 
