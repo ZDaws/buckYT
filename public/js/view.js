@@ -4,7 +4,6 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var videoList = [];
 var videoCountdown;
 
 $(function() {
@@ -44,6 +43,34 @@ function initializeVideos(){
     $('.players').show();
     $('.spinner').hide();
     $('.players').children().eq(0).show();
+    $('.jsPrevious').on('click', function(event) {
+        event.preventDefault();
+        previousVideo();
+    });
+    $('.jsNext').on('click', function(event) {
+        event.preventDefault();
+        nextVideo();
+    });
+    $('.player-controls').show();
+}
+
+var i = 0;
+
+function previousVideo(){
+    $('.players').children().eq(i).hide();
+    i--;
+    if(i<0){
+        i = $('.players').children().length-1;
+    }
+    $('.players').children().eq(i).show();
+} 
+function nextVideo(){
+    $('.players').children().eq(i).hide();
+    i++;
+    if(i>=$('.players').children().length){
+        i = 0;
+    }
+    $('.players').children().eq(i).show();
 } 
 
 // 4. The API will call this function when the video player is ready.
