@@ -60,7 +60,9 @@ function initializeVideos(){
 var i = 0;
 
 function previousVideo(){
-    videoList[i].pauseVideo();
+    if(videoList[i].getPlayerState() != -1){
+        videoList[i].pauseVideo();
+    }
     $('.players').children().eq(i).hide();
     i--;
     if(i<0){
@@ -69,7 +71,9 @@ function previousVideo(){
     $('.players').children().eq(i).show();
 } 
 function nextVideo(autoPlay){
-    videoList[i].pauseVideo();
+    if(videoList[i].getPlayerState() != -1){
+        videoList[i].pauseVideo();
+    }
     $('.players').children().eq(i).hide();
     i++;
     if(i>=$('.players').children().length){
