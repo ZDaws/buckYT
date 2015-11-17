@@ -60,7 +60,7 @@ function initializeVideos(){
 var i = 0;
 
 function previousVideo(){
-    if(videoList[i].getPlayerState() != -1){
+    if(videoList[i].getPlayerState() != 5){
         videoList[i].pauseVideo();
     }
     $('.players').children().eq(i).hide();
@@ -71,7 +71,7 @@ function previousVideo(){
     $('.players').children().eq(i).show();
 } 
 function nextVideo(autoPlay){
-    if(videoList[i].getPlayerState() != -1){
+    if(videoList[i].getPlayerState() != 5){
         videoList[i].pauseVideo();
     }
     $('.players').children().eq(i).hide();
