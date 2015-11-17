@@ -69,6 +69,7 @@ function previousVideo(){
         i = $('.players').children().length-1;
     }
     $('.players').children().eq(i).show();
+    $('.current-video-index').text(i+1);
 } 
 function nextVideo(autoPlay){
     if(videoList[i].getPlayerState() != 5){
@@ -80,6 +81,7 @@ function nextVideo(autoPlay){
         i = 0;
     }
     $('.players').children().eq(i).show();
+    $('.current-video-index').text(i+1);
     if(autoPlay){
         videoList[i].seekTo(0);
         videoList[i].playVideo();

@@ -3,9 +3,21 @@
         <h3><%= buckyt.title %></h3>
         <p>Created by <%= buckyt.author %> | <%= buckyt.videoList.length %> Videos</p>
     </div>
+
     <img src="/img/spinner.gif" class="spinner">
-    <div class="player-controls"><a href="#" class="jsPrevious carouselPrevious">&larr; Previous</a>
-    <a href="#" class="jsNext carouselNext">Next &rarr;</a></div>
+
+    <div class="player-controls grid">
+        <div class="grid-col grid-col_4of12">
+            <a href="#" class="jsPrevious carouselPrevious">&larr; Previous</a>
+        </div>
+        <div class="grid-col grid-col_4of12">
+            <div class="video-number">Video <span class="current-video-index">1</span> of <%= buckyt.videoList.length %></div>
+        </div>
+        <div class="grid-col grid-col_4of12">
+            <a href="#" class="jsNext carouselNext">Next &rarr;</a>
+        </div>
+    </div>
+
     <div class ="players">
     <% for(var i=0; i < buckyt.videoList.length; i++){%>
       <div data-videoid="<%=buckyt.videoList[i]%>"></div>
